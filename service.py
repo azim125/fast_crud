@@ -32,5 +32,5 @@ def delete_user_in_db(*, data: UserDeleteSchema,db: Session):
     if not user_in_db:
         raise UserNotFoundException()
     db.delete(user_in_db)
-    db.commit()
+    #0db.commit()
     return {"msg":"user is deleted"}
